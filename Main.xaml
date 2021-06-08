@@ -624,7 +624,7 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <av:Point x:Key="ShapeLocation">360.4,226.4</av:Point>
                       <av:Size x:Key="ShapeSize">70.4,87.2</av:Size>
-                      <av:PointCollection x:Key="TrueConnector">360.4,270 210,270 210,171.4</av:PointCollection>
+                      <av:PointCollection x:Key="TrueConnector">360.4,270 210,270 210,181.4</av:PointCollection>
                       <av:PointCollection x:Key="FalseConnector">430.8,270 460.8,270 460.8,270.2 489.6,270.2</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
@@ -632,9 +632,9 @@
                     <FlowStep x:Name="__ReferenceID24">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <av:Point x:Key="ShapeLocation">110,149</av:Point>
+                          <av:Point x:Key="ShapeLocation">110,159</av:Point>
                           <av:Size x:Key="ShapeSize">200,22.4</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">210,149 210,119 412.4,119 412.4,40.42 442.4,40.42</av:PointCollection>
+                          <av:PointCollection x:Key="ConnectorLocation">210,159 210,129 412.4,129 412.4,40.42 442.4,40.42</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <Delay DisplayName="Delay (5 sec)" Duration="00:00:05" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="Delay_1">
