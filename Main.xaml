@@ -55,11 +55,7 @@
       <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="Email" />
       <Variable x:TypeArguments="s:DateTime" Name="Start_Time" />
       <Variable x:TypeArguments="x:Boolean" Name="bool_Exception" />
-      <Variable x:TypeArguments="x:TimeSpan" Name="TimeSpan">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:TimeSpan" Value="00:05:00" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:TimeSpan" Default="00:05:00" Name="TimeSpan" />
       <Variable x:TypeArguments="s:DateTime" Name="End_Time" />
     </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
@@ -69,7 +65,7 @@
         <av:Point x:Key="ShapeLocation">20,2.4</av:Point>
         <av:Size x:Key="ShapeSize">60,75.2</av:Size>
         <av:PointCollection x:Key="ConnectorLocation">80,40 130,40</av:PointCollection>
-        <x:Double x:Key="Width">689.59999999999991</x:Double>
+        <x:Double x:Key="Width">689.6</x:Double>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
@@ -612,10 +608,7 @@
             <x:Reference>__ReferenceID19</x:Reference>
           </Flowchart>
           <FlowStep.Next>
-            <FlowDecision x:Name="__ReferenceID22" DisplayName="bool_Exception" sap:VirtualizedContainerService.HintSize="87.2,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
-              <FlowDecision.Condition>
-                <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="bool_Exception" />
-              </FlowDecision.Condition>
+            <FlowDecision x:Name="__ReferenceID22" Condition="[bool_Exception]" DisplayName="bool_Exception" sap:VirtualizedContainerService.HintSize="87.2,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -625,10 +618,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <FlowDecision.True>
-                <FlowDecision x:Name="__ReferenceID23" DisplayName="TimeSpan" sap:VirtualizedContainerService.HintSize="70.4,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
-                  <FlowDecision.Condition>
-                    <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="Now-Start_Time&lt;=TimeSpan" />
-                  </FlowDecision.Condition>
+                <FlowDecision x:Name="__ReferenceID23" Condition="[Now-Start_Time&lt;=TimeSpan]" DisplayName="TimeSpan" sap:VirtualizedContainerService.HintSize="70.4,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
